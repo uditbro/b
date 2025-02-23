@@ -26,17 +26,17 @@ CSRF_TRUSTED_ORIGINS = [""]
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
-SECRET_KEY = os.getenv("SECRET_KEY")
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-=======
+
+
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
->>>>>>> 15e785d (Third commit)
+
 
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS").split(",")
