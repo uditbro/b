@@ -14,20 +14,21 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-CSRF_TRUSTED_ORIGINS = ["https://daddydjango.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = [""]
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-=dds6k5r_i30mf0iy7@u)m_1+gcyt@1l%s$i-88n_sv($w)v*u'
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['daddydjango.up.railway.app','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
+PORT = os.getenv("PORT","8000")
 
 # Application definition
 
